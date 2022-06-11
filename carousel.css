@@ -1,0 +1,206 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap'); 
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Open+Sans:ital,wght@1,600;1,800&display=swap');
+
+:root {
+    --color: #fff;
+    --border-color: #fff;
+    --border-radius: 8px;
+    --h-font: 'Bebas Neue', sans-serif;
+    --p-font: 'Open Sans' , sans-serif;
+    --letter-spacing: 2px;
+    --p-Fsize: 18px;
+    --feature-color: #D23535;
+    --h1Fsize: 80px;
+    --h3Fsize: 24px;
+
+}
+
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+.general-carousel{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-image: url(./img/bg\ image\ 2.jpg) ;
+    background-repeat: no-repeat;
+    color: var(--color);
+    height: 1050px;
+    width: 100vw;
+}
+
+
+
+
+div.who-is{
+    width: 40%;
+    margin-left: 10%;
+    height: 100vh;
+    letter-spacing: var(--letter-spacing);
+    align-self: center;
+}
+
+
+.who-is h3 {
+    margin: 20px 0;
+    font-family: var(--h-font);
+}
+
+.who-is h1 {
+    font-size: 80px;
+    font-family: var(--h-font);
+    line-height: 80px;
+    border-bottom: 3px solid var(--border-color);
+    margin: 20px 0;
+    letter-spacing: 3px;
+    overflow: hidden;
+}
+
+.who-is p {
+    font-family: var(--p-font);
+    letter-spacing: 0;
+    text-align: justify;
+    font-size: var(--p-Fsize) ;
+}
+
+
+/* ==============================
+-------------SLIDES--------------
+================================= */
+
+div.carousel{
+    position: relative;
+    width: 40%;
+    height: 100vh;
+    margin-right: 5%;
+}
+
+#img1, #img2, #img3 {
+    border-radius: var(--border-radius);
+}
+
+#img1 {
+    position: absolute;
+    height: 611px;
+    width: 503px;
+    z-index: 3;
+    top: 10px;
+    left: 10px;
+    transition: all 1s ease-out;
+}
+
+
+#img2 {
+    position: absolute;
+    height: 563px;
+    width: 438px;
+    top: 25px;
+    left: 100px;
+    z-index: 2;
+    transition: all 1s ease-out;
+}
+
+#img3 {
+    position: absolute;
+    height: 512px;
+    width: 438px;
+    top: 50px;
+    left: 120px;
+    z-index: 1;
+    transition: all 1s ease-out;
+}
+
+input[type="radio"] {
+    position: absolute;
+    z-index: 4;
+    top: 600px;
+    left: 167px;
+}
+
+#i2 {
+    left: 217px;
+}
+
+
+#i3 {
+    left: 267px;
+}
+
+/* ==============================
+---------SECOND SLIDE-----------
+================================= */
+#i2:checked ~ div #img2 {
+    z-index: 3;
+    height: 611px;
+    width: 503px;
+    top: 10px;
+    left: 10px;
+}
+
+/* ====================================================================
+---------Position of fist slide when second slide is checked-----------
+======================================================================== */
+
+#i2:checked ~ div #img1 {
+    z-index: 1;
+    height: 512px;
+    width: 438px;
+    top: 50px;
+    left: 120px;
+}
+
+
+/* ====================================================================
+---------Position of third slide when second slide is checked-----------
+======================================================================== */
+
+#i2:checked ~ div #img3 {
+    height: 563px;
+    width: 438px;
+    top: 25px;
+    left: 100px;
+    z-index: 2;
+
+}
+
+
+/* ==============================
+---------THIRD SLIDE-----------
+================================= */
+
+#i3:checked ~ div #img3 {
+    z-index: 3;
+    height: 611px;
+    width: 503px;
+    top: 10px;
+    left: 10px;
+}
+
+
+/* ====================================================================
+---------Position of first slide when third slide is checked-----------
+======================================================================== */
+
+#i3:checked ~ div #img1 {
+    z-index: 2;
+    height: 563px;
+    width: 438px;
+    top: 25px;
+    left: 100px;
+}
+
+
+/* ====================================================================
+---------Position of second slide when third slide is checked-----------
+======================================================================== */
+
+#i3:checked ~ div #img2 {
+    height: 512px;
+    width: 438px;
+    top: 50px;
+    left: 120px;
+    z-index: 1;
+}

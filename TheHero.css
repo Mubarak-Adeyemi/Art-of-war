@@ -1,0 +1,155 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap'); 
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Open+Sans:ital,wght@1,600;1,800&display=swap');
+
+
+
+:root {
+    --color: #fff;
+    --border-color: #fff;
+    --border-radius: 8px;
+    --h-font: 'Bebas Neue', sans-serif;
+    --p-font: 'Open Sans' , sans-serif;
+    --letter-spacing: 2px;
+    --p-Fsize: 18px;
+    --feature-color: #D23535;
+    --h1Fsize: 80px;
+    --h3Fsize: 24px;
+
+}
+
+* {
+    box-sizing: border-box;
+}
+
+.the-hero {
+    width: 100vw;
+    height: 960.27px;
+    background-color: #000;
+    color: var(--color);
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-end;
+}
+
+.hero-image {
+    width: 60%;
+    margin-left: 10%;
+}
+.hero-text {
+    align-self: center;
+    margin-right: 20%;
+    width: 30%;
+    letter-spacing: var(--letter-spacing);
+    font-family: var(--h-font);
+}
+
+.hero-title h3 {
+    font-size: var(--h3Fsize);
+}
+
+.hero-title h1 {
+    font-size: var(--h1Fsize);
+    letter-spacing: 3px;
+
+}
+
+.battle-list {
+    position: relative;
+}
+
+ul {
+    padding: 20px;
+    line-height: 30px;
+    list-style-type: none;
+    font-family: var(--h-font);
+    font-size: 36px;
+    line-height: 50px;
+    color: var(--feature-color);
+    letter-spacing: 0;
+    width: 700px;
+    
+}
+
+ul #l1,
+ul #l2,
+ul #l3 {
+    position: absolute;
+    top: 35px;
+    display: block;
+    left: 0;
+    
+}
+
+ul> #l2 {
+    top: 85px;
+}
+
+ul> #l3 {
+    top: 135px;
+}
+
+li {
+    width: 365px;
+}
+
+/* ==============================
+-------------display none
+                #d1
+                #d2
+                #d3
+                --------------
+================================= */
+
+li#d1,
+li#d2,
+li#d3 {
+
+    position: relative;
+    display: none;
+    font-size: var(--p-Fsize);
+    line-height: 22px;
+    font-family: var(--p-font);
+    color: var(--color);
+    text-align: justify;
+    
+
+}
+
+/* ==============================
+-------------display 
+                #d1
+                #d2
+                #d3
+ when radio is checked--------------
+================================= */
+
+    /* BATTLE OF BOJU */
+input[type="radio"]#l1:checked ~ li#d1,
+
+    /* WAR OF THE EIGHT PRINCES*/
+input[type="radio"]#l2:checked ~ li#d2,
+
+    /* BATTLE OF RED CLIFFS */
+input[type="radio"]#l3:checked ~ li#d3 {
+    display: block;
+}
+
+/* radio 2 position when radio 1 is checked */
+input[type="radio"]#l1:checked ~ input[type="radio"]#l2 {
+    top: 150px; 
+}
+
+/* radio 3 position when radio 1 is checked */
+input[type="radio"]#l1:checked ~ input[type="radio"]#l3 {
+    top: 200px; 
+}
+
+
+/* radio 3 position when radio 2 is checked */ 
+input[type="radio"]#l2:checked ~ input[type="radio"]#l3 {
+    top: 180px; 
+}
+
+
+
+
